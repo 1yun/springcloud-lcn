@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common" />
+        <module name="eureka-server" />
+        <module name="order-service" />
+        <module name="order-service-mpl" />
+        <module name="pay-service" />
+        <module name="pay-service-impl" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="demo1" target="1.8" />
+      <module name="demo2" target="1.8" />
+      <module name="springcloud-mybatis" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: order
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka/
+    register-with-eureka: true
+    fetch-registry: true
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: com.nfsq.yqf.bean
+ribbon:
+  eureka:
+    enable: true
+tm:
+  manager:
+    url: http://127.0.0.1:8899/tx/manager/

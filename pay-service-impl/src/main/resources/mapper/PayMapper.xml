@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.nfsq.yqf.mapper.PayMapper">
+    <resultMap id="BaseMap" type="com.nfsq.yqf.bean.PayInfo">
+        <id column="ID" property="id" jdbcType="DECIMAL"/>
+        <result column="STATUS" property="status" jdbcType="INTEGER"/>
+        <result column="CREATE_DATE" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="MODIFY_DATE" property="modifyDate" jdbcType="TIMESTAMP"/>
+        <result column="MODIFY_BY" property="modifyBy" jdbcType="VARCHAR"/>
+    </resultMap>
+    <update id="updatePayInfo" parameterType="java.lang.Integer">
+        update pay_t set STATUS =1
+        where id=#{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>
